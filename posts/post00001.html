@@ -3,41 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ပိုကြိုးစားတိုင်းစာပိုရလာမယ်လို့ထင်နေတုန်းလား</title>
-     <script data-goatcounter="https://post00001.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-    <style>
+  <title>ပိုကြိုးစားတိုင်း စာပိုရလာမယ်လို့ထင်နေတုန်းလား</title>
 
-      /* ===== Disqus cleanup ===== */
+  <!-- ===== GoatCounter (Views) ===== -->
+  <script data-goatcounter="https://post00001.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 
-      /* Hide marketing + legal footer */
-      #disqus_thread footer,
-      #disqus_thread .disqus-footer,
-      #disqus_thread .privacy-policy,
-      #disqus_thread .do-not-sell,
-      #disqus_thread .copyright {
-        display: none !important;
-      }
-      
-      /* Reduce clutter around signup text */
-      #disqus_thread .auth-disclaimer,
-      #disqus_thread .disclaimer {
-        font-size: 0.85rem;
-        color: #999;
-      }
-      
-      /* Make comment box feel lighter */
-      #disqus_thread textarea {
-        font-family: "Myittar", serif;
-        font-size: 1.05rem;
-      }
-      
-      /* Reduce heavy borders */
-      #disqus_thread iframe {
-        background: transparent !important;
-      }
-
-      
+  <style>
     /* ===== Custom Burmese Font (local) ===== */
     @font-face {
       font-family: "Myittar";
@@ -175,6 +147,18 @@
       color:var(--muted);
       font-size:0.98rem;
       line-height:1.8;
+    }
+
+    /* ===== Comments wrapper to make Disqus look clean ===== */
+    .comments-wrap{
+      margin-top: 10px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+    #disqus_thread{
+      margin-top: 12px;
     }
   </style>
 </head>
@@ -452,21 +436,33 @@
           </li>
         </ul>
       </div>
-      <!-- ===== COMMENTS ===== -->
-      <h2 class="comments-title">💬 Comments</h2>
 
-      <div id="disqus_thread"></div>
+      <hr class="divider" />
 
-      <script>
-        (function() {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://post0001.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
+      <!-- ===== COMMENTS (clean wrapper) ===== -->
+      <section class="comments-wrap">
+        <h2 class="section-title" style="margin-top:0;">💬 Comments</h2>
+        <p class="small" style="margin-top:-6px;">Anonymous comments allowed. Be kind. ❤️</p>
 
-      
+        <div id="disqus_thread"></div>
+
+        <script>
+          var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+
+          (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://post0001.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </section>
+
     </article>
   </div>
 </body>
