@@ -7,6 +7,37 @@
      <script data-goatcounter="https://post00001.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
     <style>
+
+      /* ===== Disqus cleanup ===== */
+
+      /* Hide marketing + legal footer */
+      #disqus_thread footer,
+      #disqus_thread .disqus-footer,
+      #disqus_thread .privacy-policy,
+      #disqus_thread .do-not-sell,
+      #disqus_thread .copyright {
+        display: none !important;
+      }
+      
+      /* Reduce clutter around signup text */
+      #disqus_thread .auth-disclaimer,
+      #disqus_thread .disclaimer {
+        font-size: 0.85rem;
+        color: #999;
+      }
+      
+      /* Make comment box feel lighter */
+      #disqus_thread textarea {
+        font-family: "Myittar", serif;
+        font-size: 1.05rem;
+      }
+      
+      /* Reduce heavy borders */
+      #disqus_thread iframe {
+        background: transparent !important;
+      }
+
+      
     /* ===== Custom Burmese Font (local) ===== */
     @font-face {
       font-family: "Myittar";
