@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>လွယ်လွယ်အဖြေရတဲ့ ခေတ်မှာ ပျောက်ဆုံးသွားသော "ခေါင်းကုတ်ရတဲ့ အခိုက်အတန့်များ"</title>
+
+  <!-- GoatCounter -->
+  <script data-goatcounter="https://post00002.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+
+  <style>
+    /* ===== Local Burmese Font ===== */
+    @font-face {
+      font-family: "Yati";
+      src: url("../assets/fonts/YatiUni-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    :root{
+      --bg:#faf7ef;
+      --paper:#ffffff;
+      --text:#1f1f1f;
+      --muted:#6f6f6f;
+      --line:#e7e1d6;
+      --link:#8b5a3c;
+      --maxw:820px;
+
+      --accent:#8b5a3c;
+      --accent2:#2e7d6b;
+      --soft:#fff3da;
+      --softLine:#f0dfb5;
+
+      --shadow: 0 18px 50px rgba(20, 12, 6, .08);
+      --radius:16px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      background:
+        radial-gradient(900px 500px at 15% 0%, rgba(139,90,60,.06), transparent 60%),
+        radial-gradient(800px 600px at 85% 10%, rgba(46,125,107,.06), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      font-family:"Yati", serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.95;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:44px auto 90px;
+      padding:0 18px;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:14px;
+      gap:12px;
+    }
+    .nav a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:0.95rem;
+    }
+    .nav a:hover{ color:var(--text); }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      padding:10px 0;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(250,247,239,.86), rgba(250,247,239,.55));
+      border-bottom:1px solid rgba(231,225,214,.9);
+    }
+    .topbar-inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:0 18px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content:space-between;
+    }
+    .chips{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:.9rem;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.7);
+      color:var(--muted);
+    }
+    .chip strong{ color:var(--text); font-weight:700; }
+
+    .btn{
+      cursor:pointer;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.82);
+      color:var(--text);
+      padding:9px 12px;
+      border-radius:12px;
+      font-size:.95rem;
+      transition: transform .08s ease, background .2s ease;
+      user-select:none;
+    }
+    .btn:hover{ background:#fff; }
+    .btn:active{ transform: scale(.98); }
+
+    .progress{
+      height:8px;
+      border-radius:999px;
+      background: rgba(231,225,214,.9);
+      overflow:hidden;
+      width: 220px;
+      border:1px solid rgba(231,225,214,.9);
+    }
+    .progress > div{
+      height:100%;
+      width:0%;
+      background: linear-gradient(90deg, var(--accent), #c38b66);
+      transition: width .35s ease;
+    }
+
+    .card{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow: var(--shadow);
+    }
+
+    .tag{
+      display:inline-block;
+      font-size:0.85rem;
+      color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px;
+      border-radius:999px;
+      margin-bottom:10px;
+      background: rgba(255,255,255,.7);
+    }
+
+    h1{
+      font-size:2.02rem;
+      line-height:1.25;
+      margin:10px 0 10px;
+      letter-spacing:0.2px;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:0.95rem;
+      margin-bottom:18px;
+    }
+
+    p{
+      font-size:1.16rem;
+      margin:0 0 1.15em;
+    }
+
+    .divider{
+      margin:22px 0 18px;
+      border:none;
+      border-top:1px solid var(--line);
+    }
+
+    .figure{ margin:18px 0 22px; }
+    .figure img{
+      width:100%;
+      height:auto;
+      border-radius:14px;
+      border:1px solid var(--line);
+      display:block;
+      transform: translateY(6px);
+      opacity: 0;
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .figure.inview img{ opacity:1; transform: translateY(0); }
+
+    .caption{
+      color:var(--muted);
+      font-size:0.95rem;
+      margin-top:8px;
+      text-align:center;
+      line-height:1.6;
+    }
+
+    .section-title{
+      font-size:1.45rem;
+      margin:1.35em 0 0.55em;
+      line-height:1.35;
+    }
+
+    .highlight{
+      background:var(--soft);
+      border:1px solid var(--softLine);
+      padding:14px 14px;
+      border-radius:12px;
+      margin:16px 0 18px;
+      position: relative;
+      overflow:hidden;
+    }
+    .highlight::after{
+      content:"";
+      position:absolute; inset:-40px -40px auto auto;
+      width:180px; height:180px;
+      background: radial-gradient(circle at 30% 30%, rgba(139,90,60,.18), transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+
+    ul{ margin:0.2em 0 1.2em 1.2em; padding:0; }
+    li{ margin:0.35em 0; font-size:1.12rem; }
+
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    /* ===== Interactive Blocks ===== */
+    .interactive{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.76);
+      border-radius: 14px;
+      padding: 14px;
+      margin: 16px 0 18px;
+    }
+    .interactive h3{
+      margin:0 0 10px;
+      font-size:1.15rem;
+      line-height:1.4;
+    }
+    .row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .row > *{ flex:1; }
+    .small{ font-size:.98rem; color:var(--muted); margin:.2em 0 0; }
+
+    .slider{
+      width:100%;
+      appearance:none;
+      height:10px;
+      border-radius:999px;
+      background: rgba(231,225,214,.95);
+      outline:none;
+      border:1px solid rgba(231,225,214,.9);
+    }
+    .slider::-webkit-slider-thumb{
+      appearance:none;
+      width:22px; height:22px;
+      border-radius:50%;
+      background: var(--accent2);
+      border:3px solid #fff;
+      box-shadow: 0 10px 20px rgba(46,125,107,.18);
+      cursor:pointer;
+    }
+    .meter{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      margin-top:10px;
+      font-size:1.02rem;
+    }
+    .pill{
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      white-space:nowrap;
+    }
+    .pill strong{ color:var(--text); }
+
+    .reveal{
+      cursor:pointer;
+      border:1px dashed var(--line);
+      background: rgba(255,255,255,.78);
+      border-radius:14px;
+      padding: 14px;
+      margin: 12px 0;
+      transition: background .2s ease, transform .08s ease;
+      user-select:none;
+    }
+    .reveal:hover{ background:#fff; }
+    .reveal:active{ transform:scale(.99); }
+    .reveal .ans{ display:none; margin-top:10px; }
+    .reveal.open .ans{ display:block; }
+
+    /* ===== Presenter Mode ===== */
+    .presenter{
+      margin: 18px 0 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.82);
+      border-radius: 16px;
+      overflow:hidden;
+    }
+    .presenter-head{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      padding: 12px 14px;
+      border-bottom:1px solid var(--line);
+    }
+    .presenter-head .left{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .kbd{
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:10px;
+      padding:6px 10px;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+    .beat{
+      padding: 14px;
+    }
+    .beat-title{
+      font-size:1.25rem;
+      margin:0 0 6px;
+      line-height:1.35;
+    }
+    .beat-line{
+      margin:0;
+      font-size:1.12rem;
+      color: var(--text);
+    }
+    .beat-hint{
+      margin:10px 0 0;
+      font-size:.98rem;
+      color: var(--muted);
+    }
+
+    /* ===== Tiny quiz ===== */
+    .quiz{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+    .opt{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding: 12px;
+      cursor:pointer;
+      background:#fff;
+      user-select:none;
+      transition: transform .08s ease, background .2s ease;
+    }
+    .opt:hover{ background: rgba(255,243,218,.55); }
+    .opt:active{ transform: scale(.99); }
+    .opt.correct{ border-color: rgba(46,125,107,.5); background: rgba(126, 240, 208, .18); }
+    .opt.wrong{ border-color: rgba(255,122,154,.5); background: rgba(255,122,154,.12); }
+
+    /* Comments wrapper */
+    .comments-wrap{
+      margin-top: 10px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+    #disqus_thread{ margin-top: 12px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky top bar for presenter controls -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="chips">
+        <div class="chip">🎬 <strong>2-min Mode</strong> (Presenter)</div>
+        <div class="chip">⌨️ <strong>← →</strong> / Space</div>
+        <div class="chip">⏱️ <span id="timeLeft">~2:00</span></div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div class="progress" aria-label="progress">
+          <div id="progBar"></div>
+        </div>
+        <button class="btn" id="jumpPresenter">Presenter</button>
+        <button class="btn" id="jumpInteractive">Interactive</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="nav">
+      <a href="../index.html">← Home</a>
+      <a href="#presenter">Go to Presenter ↓</a>
+    </div>
+
+    <article class="card">
+      <div class="tag">Thinking · Post #00002 · Interactive</div>
+      <h1>အဖြေလွယ်လွယ်ရတဲ့ ခေတ်မှာ ပျောက်ဆုံးသွားတဲ့ “ခေါင်းကုတ်ရတဲ့ အခိုက်အတန့်”</h1>
+      <div class="meta">by Haru · <span style="color:var(--muted)">for 2-minute video</span></div>
+
+      <!-- Cover -->
+      <div class="figure">
+        <img src="../assets/images/post00002/1.jpg" alt="cover" />
+        <div class="caption">ခေါင်းကုတ်ရတဲ့ အခိုက်အတန့် — (Cover)</div>
+      </div>
+
+      <!-- ===== Presenter Mode ===== -->
+      <section id="presenter" class="presenter">
+        <div class="presenter-head">
+          <div class="left">
+            <strong>🎙️ Presenter Beats (2 minutes)</strong>
+            <span class="kbd">← / →</span>
+            <span class="kbd">Space</span>
+            <span class="kbd" id="beatCount">1 / 8</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn" id="prevBeat">← Back</button>
+            <button class="btn" id="nextBeat">Next →</button>
+          </div>
+        </div>
+        <div class="beat">
+          <h3 class="beat-title" id="beatTitle"></h3>
+          <p class="beat-line" id="beatLine"></p>
+          <p class="beat-hint" id="beatHint"></p>
+        </div>
+      </section>
+
+      <p>
+        ကျွန်တော်တို့ ခေတ်ကြီးက အရမ်းသက်သာလွန်းနေပြီလားလို့ တွေးမိတယ်။
+        ဂဏန်းတွက်မလား Calculator ရှိတယ်။ အလွတ်ကျက်စရာလိုသေးလား ဖုန်းတစ်လုံးရှိရင် အချက်အလက်တွေအကုန်ရှာလို့ရတယ်။
+        ကျောင်းစာတွေအတွက်လား အထူးထုတ် (Guidebook) တွေရှိတယ်။
+        အခုဆိုရင် AI တွေပါ ပေါ်လာတော့ စာအုပ် ၄-၅ အုပ်လောက်ကို လှန်လှောပြီး ခေါင်းတိုးအဖြေရှာရမယ့်
+        ကိစ္စတွေက စက္ကန့်ပိုင်းနဲ့ ပြီးသွားတယ်။
+      </p>
+
+      <div class="highlight">
+        <p style="margin:0;">
+          နည်းပညာတွေ များလာတာ <strong>ကောင်းတော့ကောင်း</strong>ပါတယ်။ ဒါပေမဲ့… <br/>
+          ကျွန်တော်တို့ မသိမသာဆုံးရှုံးလိုက်ရတဲ့အရာတစ်ခု ရှိတယ်။
+          အဲ့ဒါကတော့ <strong>“စဉ်းစားတွေးခေါ်ဖို့ ရုန်းကန်ရတဲ့ ဒုက္ခ (The struggle to figure things out)”</strong> ပါပဲ။
+        </p>
+      </div>
+
+      <!-- ===== Interactive 1: AI vs Brain slider ===== -->
+      <section id="interactive" class="interactive">
+        <h3>🧠 AI ကအလွယ်ကူဆုံး… ဒါပေမဲ့ ဦးနှောက်က ဘာလေ့လာသလဲ?</h3>
+        <p class="small">
+          Slider ကိုရွှေ့ကြည့်ပါ — “အဖြေ” ပိုယူလေ… “Process” ပိုပျောက်လေ ဆိုတာကို မြင်နိုင်မယ်။
+        </p>
+
+        <div class="row" style="margin-top:10px;">
+          <div>
+            <input class="slider" id="aiSlider" type="range" min="0" max="100" value="45" />
+            <div class="meter">
+              <div class="pill">🤖 AI reliance: <strong id="aiVal">45%</strong></div>
+              <div class="pill">💪 Struggle time: <strong id="struggleVal">55%</strong></div>
+              <div class="pill">✨ Skill growth: <strong id="skillVal">Medium</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <p>
+        အဖြေမှန်ရဖို့လောက်ပဲ ကြိုးစားကြတဲ့ အခုခေတ် ကျောင်းသားတွေ၊ လူငယ်တွေရဲ့ pattern က ဒီလို၊
+        AI သို့မဟုတ် အထူးထုတ်ကပေးတဲ့ Step-by-step အဖြေကို ကြည့်မယ်။
+        ပြီးရင် အဲ့ဒီအဖြေကို နားလည်အောင်လုပ်မယ် (တချို့ဆို နားမလည်ဘဲ အလွတ်ကျက်မယ်)။
+        ပြီးရင် စာမေးပွဲမှာ အမှတ် ၁၀၀ ဖိုးမေးရင် ၁၀၀ ရဖို့ ဖြေမယ်။
+      </p>
+
+      <!-- Photo -->
+      <div class="figure">
+        <img src="../assets/images/post00002/2.jpg" alt="studying desk" />
+        <div class="caption">“ခေါင်းကုတ်ပြီး ရှာဖွေတဲ့ အချိန်” ကပဲ skill ကိုတည်ဆောက်ပေးတယ်</div>
+      </div>
+
+      <p>
+        ဒီလို စာလုပ်ကြတဲ့ Process တစ်ခုလုံးမှာ “ငါ ဘယ်လိုစဉ်းစားရမလဲ”၊ “ဒီပြဿနာကို ဘယ်လို ရှင်းရမလဲ” ဆိုပြီး
+        ခေါင်းခြောက်ခံ၊ ခေါင်းကုတ်ပြီး စဉ်းစားရတဲ့ အပိုင်း ပျောက်ဆုံးနေပါပြီ။
+      </p>
+
+      <!-- ===== Interactive 2: tap-to-reveal key lines ===== -->
+      <section class="interactive">
+        <h3>🎯 Key Lines (ဗီဒီယိုမှာ emphasis ပေးဖို့)</h3>
+
+        <div class="reveal" data-reveal>
+          <strong>Line 1: “ဒါက ပညာရေးလား…?”</strong>
+          <div class="ans">
+            ဒါက ပညာရေးလား၊ ဒါမှမဟုတ် “ကြက်တူရွေး နှုတ်တိုက်”ကို အဆင့်မြှင့်ထားတဲ့ Version လား?
+          </div>
+          <p class="small">Click to reveal (နောက်ဆုံးမှာ ပြောရင် impact ကောင်း)</p>
+        </div>
+
+        <div class="reveal" data-reveal>
+          <strong>Line 2: “အဖြေမှန်ထက် Process”</strong>
+          <div class="ans">
+            AI ခေါက် အဖြေမှန်ရဖို့ထက် <strong>စဉ်းစားလိုက်ရတဲ့ လုပ်ငန်းစဉ် (Process)</strong> က လိုကိုလိုအပ်ပါတယ်။
+          </div>
+          <p class="small">Click to reveal</p>
+        </div>
+
+        <div class="reveal" data-reveal>
+          <strong>Line 3: “လွယ်ကူဆုံးလမ်း ≠ တိုးတက်မှု”</strong>
+          <div class="ans">
+            “အလွယ်ကူဆုံးလမ်း” က အမြဲတမ်း “တိုးတက်မှု” မဟုတ်ဘူး။
+          </div>
+          <p class="small">Click to reveal</p>
+        </div>
+      </section>
+
+      <p>
+        အဖြေကို AI က ရှာပေးတယ်။ စဉ်းစားပေးတယ်။ Reference တွေ ထုတ်ပေးတယ်။
+        ကိုယ်က ဘာလုပ်ရသလဲဆိုတော့ ရလာတဲ့အဖြေကို ကူးချပြီး ကိုယ်ပိုင်အမှတ်ယူလိုက်ရုံပါပဲ။
+      </p>
+
+      <h2 class="section-title">ဘာကြောင့် သင်္ချာနဲ့ သိပ္ပံကို သင်နေရတာလဲ</h2>
+
+      <p>
+        ကျွန်တော်တို့ ကျောင်းမှာ သင်္ချာ၊ Physics၊ Chemistry၊ Biology သင်နေရတာဟာ ဖော်မြူလာတွေ အလွတ်ကျက်ဖို့ သက်သက် မဟုတ်ပါဘူး။
+        ဒါတွေက လူသားတွေ ကြုံတွေ့နေရတဲ့ပြဿနာကို ဖြေရှင်းနိုင်တဲ့အစွမ်း (Problem Solving Skill) ကို လေ့ကျင့်ပေးနေတာပါ။
+      </p>
+
+      <ul>
+        <li>Biology ကို နားလည်မှ ဆေးပညာဘက်မှာ လူ့အသက်တွေကို ကယ်နိုင်မယ်။</li>
+        <li>Physics ကို သဘောပေါက်မှ အင်ဂျင်နီယာပိုင်းဆိုင်ရာ တည်ဆောက်ရေးတွေ လုပ်နိုင်မယ်။</li>
+        <li>Mathematics ဆိုတာ ဦးနှောက်ကို Logic ကျကျ တွေးတတ်အောင် လေ့ကျင့်ပေးတာ။</li>
+      </ul>
+
+      <!-- Photo -->
+      <div class="figure">
+        <img src="../assets/images/post00002/3.jpg" alt="struggle studying" />
+        <div class="caption">“အလွယ်ကူဆုံးလမ်း” က အမြဲတမ်း “တိုးတက်မှု” မဟုတ်ဘူး</div>
+      </div>
+
+      <h2 class="section-title">ဦးနှောက်သေနေသော Civilization ဆီသို့ ?</h2>
+
+      <p>
+        အရင်က စာတစ်ပုဒ်ကို နားလည်ဖို့ Reading Comprehension လုပ်ရတယ်။
+        အခုခေတ်က စာဖတ်ပြီး နားလည်ဖို့နေနေသာသာ စာရှည်ရင်မဖတ်ချင်တော့ဘူး။
+        ဘာလို့လဲဆိုတော့ အဲ့ဒီလို “လိုချင်တာရဖို့ အားထုတ်သင့်တယ်ဆိုတဲ့ အလေ့အကျင့်” ကို
+        နည်းပညာက ဖျက်ဆီးလိုက်လို့ပါပဲ။
+      </p>
+
+      <div class="highlight">
+        <p style="margin:0;">
+          ပညာရေးဆိုတာ အဖြေမှန်ရဖို့ သက်သက် မဟုတ်ပါဘူး။ <br/>
+          သင့်ဦးနှောက်ကို တန်ဖိုးတတ်လာဖို့ဆိုရင်
+          AI ခေါက် အဖြေမှန်ရဖို့ထက် <strong>စဉ်းစားလိုက်ရတဲ့ လုပ်ငန်းစဉ် (Process)</strong> က လိုကိုလိုအပ်ပါတယ်။
+        </p>
+      </div>
+
+      <!-- ===== Interactive 3: micro-quiz ===== -->
+      <section class="interactive">
+        <h3>🧩 10-second Quiz (viewers engage လိုက်ရအောင်)</h3>
+        <p class="small">မေးခွန်း: “AI သုံးတာ မကောင်းဘူးလား?”</p>
+
+        <div class="quiz" id="quiz">
+          <div class="opt" data-answer="wrong">AI သုံးတာ မကောင်းဘူး — လုံးဝမသုံးသင့်ဘူး</div>
+          <div class="opt" data-answer="correct">AI က tool ပဲ — “Process” ကို မပျောက်အောင် သုံးရမယ်</div>
+          <div class="opt" data-answer="wrong">AI သုံးရင် အမှတ်ကောင်းရုံနဲ့ ရပြီ</div>
+        </div>
+        <p class="small" id="quizMsg" style="margin-top:8px;"></p>
+      </section>
+
+      <hr class="divider" />
+
+      <div class="links">
+        <p class="small"><strong>Related Facebook Posts (vpn ချိတ်ပြီး ကျနော့် FB page မှာ ဆက်ဖတ်လို့ရပါတယ် 🥳):</strong></p>
+        <ul>
+          <li><a target="_blank" href="https://y3llowflash.github.io/haruwrites/posts/post00001.html">ပိုကြိုးစားတိုင်း စာပိုရလာမယ်လို့ထင်နေတုန်းပဲလား?</a></li>
+          <li><a target="_blank" href="https://m.facebook.com/story.php?story_fbid=pfbid02HYQbz5qjdYC464CcLRN7udjXRLtfojAzTU3J4cqvp2aTCMV7MSPhJ6mtdKp9wwQvl&id=100089247064454&mibextid=Nif5oz">Motivation မလိုတဲ့ စာလုပ်နည်း</a></li>
+          <li><a target="_blank" href="https://m.facebook.com/story.php?story_fbid=239530435698524&id=100089247064454&mibextid=Nif5oz">စာမမေ့အောင် ဘယ်လိုလုပ်မလဲ</a></li>
+          <li><a target="_blank" href="https://m.facebook.com/story.php?story_fbid=254880070830227&id=100089247064454&mibextid=Nif5oz">စာလေ့လာတဲ့နှုန်း 10 ဆ မြန်ချင်ရင်</a></li>
+          <li><a target="_blank" href="https://m.facebook.com/story.php?story_fbid=255941847390716&id=100089247064454&mibextid=Nif5oz">Stress ကြားထဲမှာ စာလုပ်နည်း</a></li>
+        </ul>
+      </div>
+
+      <!-- ===== COMMENTS ===== -->
+      <section class="comments-wrap">
+        <h2 class="section-title" style="margin-top:0;">💬 Comments</h2>
+        <p class="small" style="margin-top:-6px; color:var(--muted);">
+          Disqus will not load on <code>file://</code> pages. Test on GitHub Pages URL.
+        </p>
+
+        <div id="disqus_thread"></div>
+
+        <script>
+          var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+          (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://post0001.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+
+        <noscript>Please enable JavaScript to view comments powered by Disqus.</noscript>
+      </section>
+
+    </article>
+  </div>
+
+  <script>
+    // ===== Fade-in images when visible =====
+    const figures = document.querySelectorAll('.figure');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('inview');
+      })
+    }, { threshold: 0.25 });
+    figures.forEach(f=>io.observe(f));
+
+    // ===== Reveal blocks =====
+    document.querySelectorAll('[data-reveal]').forEach(el=>{
+      el.addEventListener('click', ()=> el.classList.toggle('open'));
+    });
+
+    // ===== AI Slider logic =====
+    const aiSlider = document.getElementById('aiSlider');
+    const aiVal = document.getElementById('aiVal');
+    const struggleVal = document.getElementById('struggleVal');
+    const skillVal = document.getElementById('skillVal');
+
+    function updateSlider(){
+      const v = Number(aiSlider.value);
+      aiVal.textContent = v + "%";
+      struggleVal.textContent = (100 - v) + "%";
+      let label = "Medium";
+      if(v <= 30) label = "High (Good)";
+      else if(v <= 60) label = "Medium";
+      else label = "Low (Careful)";
+      skillVal.textContent = label;
+    }
+    aiSlider.addEventListener('input', updateSlider);
+    updateSlider();
+
+    // ===== Presenter Beats (2 minutes) =====
+    const beats = [
+      {
+        t:"Hook (0:00–0:15)",
+        l:"“ကျွန်တော်တို့ ခေတ်က အဖြေတွေ လွယ်လွယ်ရလွန်းနေပြီ… ဒါပေမဲ့ တစ်ခုတော့ ပျောက်သွားတယ် — ‘ခေါင်းကုတ်ရတဲ့အခိုက်အတန့်’ ”",
+        h:"(အမြန် + dramatic) Cover ကိုပြ"
+      },
+      {
+        t:"Context (0:15–0:30)",
+        l:"“Calculator၊ Guidebook၊ AI… စက္ကန့်ပိုင်းနဲ့ အဖြေမှန်ရပြီ။ ဒါကကောင်းတယ်… ဒါပေမဲ့…”",
+        h:"(pause) ‘ဒါပေမဲ့…’ ကို အလေးပေး"
+      },
+      {
+        t:"Main point (0:30–0:45)",
+        l:"“ဆုံးရှုံးသွားတာက… ‘စဉ်းစားဖို့ ရုန်းကန်ရတဲ့ Process’ ပဲ။”",
+        h:"Highlight card ကိုပြ"
+      },
+      {
+        t:"Pattern (0:45–1:05)",
+        l:"“အခု လူငယ်တွေက အဖြေကြည့် → နားလည်သလိုလုပ် → စာမေးပွဲမှာ ၁၀၀ ရအောင်ဖြေ… Process မရှိတော့ဘူး”",
+        h:"Desk photo (2.jpg) ကိုပြ"
+      },
+      {
+        t:"Why math/science? (1:05–1:25)",
+        l:"“သင်္ချာ၊ Physics… ဖော်မြူလာအလွတ်ကျက်ဖို့မဟုတ်ဘူး — Problem solving skill တည်ဆောက်ဖို့”",
+        h:"Bullet list ကို scroll လိုက်"
+      },
+      {
+        t:"Warning (1:25–1:40)",
+        l:"“Effort မထည့်ဘဲ ဖြတ်လမ်းသွားရင်… creativity သေမယ်၊ ကိုယ်တိုင် ဖြေရှင်းနိုင်စွမ်း ပျောက်မယ်”",
+        h:"3.jpg caption ကို တိုက်ရိုက်ပြ"
+      },
+      {
+        t:"Answer the obvious (1:40–1:55)",
+        l:"“AI မကောင်းဘူးလား? မဟုတ်ဘူး — AI က tool ပဲ။ ဒါပေမဲ့ Process ကို မပျောက်အောင် သုံးရမယ်”",
+        h:"Quiz ကို click လုပ်ပြ"
+      },
+      {
+        t:"Closer (1:55–2:00)",
+        l:"“ဒါကြောင့်… အဖြေတွေကြားမှာ သင့် ‘စဉ်းစားနိုင်စွမ်း’ ကိုတော့ အပျောက်မခံလိုက်ပါနဲ့”",
+        h:"အဆုံးမှာ 1 sec pause + nod"
+      }
+    ];
+
+    let idx = 0;
+    const beatTitle = document.getElementById('beatTitle');
+    const beatLine  = document.getElementById('beatLine');
+    const beatHint  = document.getElementById('beatHint');
+    const beatCount = document.getElementById('beatCount');
+    const progBar   = document.getElementById('progBar');
+    const timeLeft  = document.getElementById('timeLeft');
+
+    // 2 minutes total estimate → distribute per beat (rough)
+    const totalSeconds = 120;
+    const perBeat = Math.floor(totalSeconds / beats.length);
+
+    function renderBeat(){
+      const b = beats[idx];
+      beatTitle.textContent = b.t;
+      beatLine.textContent  = b.l;
+      beatHint.textContent  = b.h;
+
+      beatCount.textContent = (idx+1) + " / " + beats.length;
+
+      const pct = ((idx) / (beats.length-1)) * 100;
+      progBar.style.width = pct + "%";
+
+      const remaining = totalSeconds - (idx * perBeat);
+      const mm = Math.max(0, Math.floor(remaining/60));
+      const ss = Math.max(0, remaining % 60);
+      timeLeft.textContent = `~${mm}:${String(ss).padStart(2,'0')}`;
+    }
+
+    function nextBeat(){
+      if(idx < beats.length-1){ idx++; renderBeat(); }
+      else { progBar.style.width = "100%"; timeLeft.textContent="~0:00"; }
+    }
+    function prevBeat(){
+      if(idx > 0){ idx--; renderBeat(); }
+    }
+
+    document.getElementById('nextBeat').addEventListener('click', nextBeat);
+    document.getElementById('prevBeat').addEventListener('click', prevBeat);
+
+    // Keyboard controls
+    window.addEventListener('keydown', (e)=>{
+      if(e.key === "ArrowRight" || e.key === " "){ e.preventDefault(); nextBeat(); }
+      if(e.key === "ArrowLeft"){ e.preventDefault(); prevBeat(); }
+    });
+
+    renderBeat();
+
+    // Jump buttons
+    document.getElementById('jumpPresenter').addEventListener('click', ()=>{
+      document.getElementById('presenter').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    document.getElementById('jumpInteractive').addEventListener('click', ()=>{
+      document.getElementById('interactive').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+
+    // Quiz
+    const quiz = document.getElementById('quiz');
+    const quizMsg = document.getElementById('quizMsg');
+    quiz.querySelectorAll('.opt').forEach(opt=>{
+      opt.addEventListener('click', ()=>{
+        quiz.querySelectorAll('.opt').forEach(o=>o.classList.remove('correct','wrong'));
+        const ans = opt.getAttribute('data-answer');
+        if(ans === "correct"){
+          opt.classList.add('correct');
+          quizMsg.textContent = "✅ မှန်တယ် — AI က tool ပဲ။ Process ကို မပျောက်အောင် သုံး!";
+        }else{
+          opt.classList.add('wrong');
+          quizMsg.textContent = "❌ မဟုတ်သေးဘူး — AI ကိုမတားဘူး… ဒါပေမဲ့ “စဉ်းစားမှု” မပျောက်အောင်!";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
