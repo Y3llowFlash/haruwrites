@@ -159,6 +159,57 @@
       padding:0 4px;
     }
 
+    .filter-bar{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:10px 0 22px;
+  }
+
+  .chip{
+    appearance:none;
+    -webkit-appearance:none;
+    border:1px solid #e6d2a5;
+    background:#f7ebcf;
+    color:#5f432c;
+    padding:12px 18px;
+    border-radius:999px;
+    font-family:"Myittar", serif;
+    font-size:1rem;
+    line-height:1;
+    cursor:pointer;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.15s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  }
+
+  .chip:hover{
+    background:#f3e2bb;
+    border-color:#d9be86;
+    color:#4d3522;
+    transform:translateY(-1px);
+  }
+
+  .chip:active{
+    transform:translateY(0);
+  }
+
+  .chip.active{
+    background:#8b5a3c;
+    color:#fffaf2;
+    border-color:#8b5a3c;
+    box-shadow: 0 8px 20px rgba(139, 90, 60, 0.14);
+  }
+
+  .chip:focus-visible{
+    outline:none;
+    box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.18);
+  }
+
     /* Mobile */
     @media (max-width: 720px){
       .card-inner{ grid-template-columns: 1fr; }
@@ -185,10 +236,10 @@
       </div>
     </div>
 
-    <div>
-      <button class="chip" onclick="filterPosts('all')">All Posts</button>
-      <button class="chip" onclick="filterPosts('meta_learning')">How to Learn</button>
-      <button class="chip" onclick="filterPosts('life_philosophy')">Life Philosophies</button>
+    <div class="filter-bar">
+      <button class="chip active" onclick="filterPosts('all', this)"> ရေးထားသမျှ </button>
+      <button class="chip" onclick="filterPosts('meta_learning', this)"> စာလေ့လာနည်းများ </button>
+      <button class="chip" onclick="filterPosts('life_philosophy', this)">ဘဝနှင့်ပတ်သတ်လို့ </button>
     </div>
 
     <div class="feed">
