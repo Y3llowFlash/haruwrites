@@ -185,10 +185,16 @@
       </div>
     </div>
 
+    <div>
+      <button class="chip" onclick="filterPosts('all')">All Posts</button>
+      <button class="chip" onclick="filterPosts('meta_learning')">How to Learn</button>
+      <button class="chip" onclick="filterPosts('life_philosophy')">Life Philosophies</button>
+    </div>
+
     <div class="feed">
 
        <!-- ===== Post Card: #00003 ===== -->
-      <article class="card">
+      <article class="card" data-series="meta_learning">
         <div class="card-inner">
           <a class="thumb" href="./posts/post0003.html" aria-label="Read Post 00003">
             <img src="./assets/images/post00003/cover.jpg" alt="Post 00003 cover" />
@@ -197,7 +203,7 @@
           <div>
             <div class="meta">Haru · 1% Better Every Day</div>
             <h2 class="title">
-              <a href="./posts/post0003.html">ဘာသာရပ်တစ်ခုကို အမှတ်ကောင်းအောင်လုပ်တာနဲ့ Fall in Love တာက မတူဘူး</a>
+              <a href="./posts/post00003.html">ဘာသာရပ်တစ်ခုကို အမှတ်ကောင်းအောင်လုပ်တာနဲ့ Fall in Love တာက မတူဘူး</a>
             </h2>
 
             <p class="excerpt">
@@ -205,14 +211,14 @@
             </p>
 
             <div class="row">
-              <a class="btn" href="./posts/post0003.html">Read →</a>
+              <a class="btn" href="./posts/post00003.html">Read →</a>
             </div>
           </div>
         </div>
       </article>
 
        <!-- ===== Post Card: #00002 ===== -->
-      <article class="card">
+      <article class="card" data-series="meta_learning">
         <div class="card-inner">
           <a class="thumb" href="./posts/post00002.html" aria-label="Read Post 00002">
             <img src="./assets/images/post00002/1.jpg" alt="Post 00002 cover" />
@@ -238,7 +244,7 @@
       </article>
 
       <!-- ===== Post Card: #00001 ===== -->
-      <article class="card">
+      <article class="card" data-series="meta_learning">
         <div class="card-inner">
           <a class="thumb" href="./posts/post00001.html" aria-label="Read Post 00001">
             <img src="./assets/images/post00001/cover.jpg" alt="Post 00001 cover" />
@@ -272,5 +278,23 @@
     </div>
 
   </div>
+  <script>
+    function filterPosts(tag) {
+      const posts = document.querySelectorAll('.card');
+
+      posts.forEach(post => {
+        if (tag === "all") {
+          post.style.display = "block";
+          return;
+        }
+
+        if (post.dataset.series === tag) {
+          post.style.display = "block";
+        } else {
+          post.style.display = "none";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
