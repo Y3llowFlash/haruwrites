@@ -1,494 +1,497 @@
 <!doctype html>
 <html lang="my">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>၅၀၀တန်မှာပါတဲ့ ခြင်္သေ့က ဘယ်ဘက်ကို မျက်နှာမူတာလဲ? — Post #00006</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>စာကျက်တိုင်း စာမရနေတာ ဘာကြောင့်လဲ? — Post #00006</title>
 
-  <script data-goatcounter="https://post00006.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://post00006.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
-  <style>
-    @font-face {
-      font-family: "Yati";
-      src: url("../assets/fonts/YatiUni-Regular.ttf") format("truetype");
-      font-weight: 400;
-      font-style: normal;
-    }
+<style>
+@font-face {
+  font-family: "Yati";
+  src: url("../assets/fonts/YatiUni-Regular.ttf") format("truetype");
+}
 
-    :root{
-      --bg:#faf7ef;
-      --paper:#ffffff;
-      --text:#1f1f1f;
-      --muted:#6f6f6f;
-      --line:#e7e1d6;
-      --link:#8b5a3c;
-      --maxw:740px;
-      --accent:#c9493a;
-    }
+body{
+  margin:0;
+  background:#faf7ef;
+  color:#1f1f1f;
+  font-family:"Yati", serif;
+  line-height:1.9;
+}
 
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:"Yati", serif;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.95;
-    }
+.container{
+  max-width:740px;
+  margin:60px auto;
+  padding:0 18px;
+}
 
-    .container{
-      max-width:var(--maxw);
-      margin:56px auto;
-      padding:0 18px;
-    }
+.card{
+  background:white;
+  border:1px solid #e7e1d6;
+  border-radius:16px;
+  padding:28px;
+}
 
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:16px;
-      gap:12px;
-    }
+h1{
+  font-size:2rem;
+  line-height:1.35;
+  margin-bottom:12px;
+}
 
-    .nav a{
-      color:var(--muted);
-      text-decoration:none;
-      font-size:0.95rem;
-    }
-    .nav a:hover{ color:var(--text); }
+h2{
+  font-size:1.4rem;
+  margin-top:28px;
+}
 
-    .card{
-      background:var(--paper);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:26px;
-    }
+p{
+  font-size:1.15rem;
+  margin:0 0 1.25em;
+}
 
-    .tag{
-      display:inline-block;
-      font-size:0.85rem;
-      color:var(--muted);
-      border:1px solid var(--line);
-      padding:6px 10px;
-      border-radius:999px;
-      margin-bottom:10px;
-    }
+ol{
+  font-size:1.15rem;
+  margin:0 0 1.25em 1.4em;
+  padding:0;
+}
 
-    h1{
-      font-size:2.05rem;
-      line-height:1.25;
-      margin:10px 0 10px;
-      letter-spacing:0.2px;
-    }
+li{
+  margin:0.35em 0;
+}
 
-    .meta{
-      color:var(--muted);
-      font-size:0.95rem;
-      margin-bottom:18px;
-    }
+.tag{
+  font-size:0.9rem;
+  color:#6f6f6f;
+  border:1px solid #e7e1d6;
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  margin-bottom:10px;
+}
 
-    p{
-      font-size:1.18rem;
-      margin:0 0 1.2em;
-    }
+.meta{
+  color:#6f6f6f;
+  font-size:0.95rem;
+  margin-bottom:18px;
+}
 
-    ol{
-      font-size:1.18rem;
-      margin:0 0 1.2em 1.4em;
-      padding:0;
-    }
+.highlight{
+  background:#fff3da;
+  border:1px solid #f0dfb5;
+  padding:14px;
+  border-radius:12px;
+  margin:18px 0;
+}
 
-    li{
-      margin:0.35em 0;
-    }
+.quote{
+  border-left:4px solid #c9493a;
+  padding-left:14px;
+  margin:18px 0;
+}
 
-    .figure{ margin:18px 0 22px; }
-    .figure img{
-      width:100%;
-      height:auto;
-      border-radius:14px;
-      border:1px solid var(--line);
-      display:block;
-      background:#fff;
-    }
-    .caption{
-      color:var(--muted);
-      font-size:0.95rem;
-      margin-top:8px;
-      text-align:center;
-      line-height:1.6;
-    }
+.divider{
+  border:none;
+  border-top:1px solid #e7e1d6;
+  margin:30px 0;
+}
 
-    .highlight{
-      background:#fff3da;
-      border:1px solid #f0dfb5;
-      padding:14px 14px;
-      border-radius:12px;
-      margin:16px 0 18px;
-    }
+.small{
+  color:#6f6f6f;
+  font-size:0.95rem;
+}
 
-    .quote{
-      border-left:4px solid var(--accent);
-      padding:8px 0 8px 16px;
-      margin:18px 0 20px;
-      color:#2a2a2a;
-    }
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+  gap:12px;
+}
 
-    .dot{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin:18px 0 16px;
-      color:var(--muted);
-      font-size:1.05rem;
-    }
-    .dot::before{
-      content:"⬛️";
-      display:inline-block;
-      transform: translateY(-1px);
-    }
+.nav a{
+  color:#6f6f6f;
+  text-decoration:none;
+  font-size:0.95rem;
+}
 
-    .divider{
-      margin:22px 0 18px;
-      border:none;
-      border-top:1px solid var(--line);
-    }
+.figure{
+  margin:20px 0 24px;
+}
+.figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:14px;
+  border:1px solid #e7e1d6;
+  background:#fff;
+}
+.caption{
+  color:#6f6f6f;
+  font-size:0.95rem;
+  margin-top:8px;
+  text-align:center;
+}
 
-    .section-title{
-      font-size:1.42rem;
-      margin:1.4em 0 0.6em;
-      line-height:1.35;
-    }
+.dot{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:18px 0 12px;
+  color:#6f6f6f;
+  font-size:1.05rem;
+}
+.dot::before{
+  content:"⬛️";
+  display:inline-block;
+  transform:translateY(-1px);
+}
 
-    a{ color:var(--link); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
+a{
+  color:#8b5a3c;
+  text-decoration:none;
+}
 
-    .links{
-      border-top:1px solid var(--line);
-      margin-top:22px;
-      padding-top:18px;
-    }
+a:hover{
+  text-decoration:underline;
+}
 
-    .small{
-      color:var(--muted);
-      font-size:0.98rem;
-      line-height:1.8;
-    }
+.links{
+  border-top:1px solid #e7e1d6;
+  margin-top:22px;
+  padding-top:18px;
+}
 
-    .comments-wrap{
-      margin-top: 10px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: #fff;
-    }
-    #disqus_thread{ margin-top:12px; }
+.comments-wrap{
+  margin-top: 10px;
+  padding: 18px;
+  border: 1px solid #e7e1d6;
+  border-radius: 14px;
+  background: #fff;
+}
+#disqus_thread{ margin-top:12px; }
 
-    @media (max-width: 640px){
-      h1{ font-size:1.75rem; }
-      p, ol{ font-size:1.08rem; }
-      .card{ padding:20px; }
-    }
-  </style>
+@media (max-width: 640px){
+  h1{ font-size:1.75rem; }
+  p, ol{ font-size:1.08rem; }
+  .card{ padding:20px; }
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <div class="nav">
-      <a href="../index.html">← Home</a>
-      <a href="./post00005.html">Prev</a>
-    </div>
+<div class="nav">
+  <a href="../index.html">← Home</a>
+  <a href="./post00005.html">Prev</a>
+</div>
 
-    <article class="card">
-      <div class="tag">Meta Learning · Post #00006</div>
-      <h1>၅၀၀တန်မှာပါတဲ့ ခြင်္သေ့က<br/>ဘယ်ဘက်ကို မျက်နှာမူတာလဲ</h1>
-      <div class="meta">by Haru · 1% Better Every Day</div>
+<article class="card">
 
-      <div class="figure">
-        <img src="../assets/images/post00006/cover.jpg" alt="Post 00006 cover"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='none';" />
-        <div class="caption">Optional cover — add <code>assets/images/post00006/cover.jpg</code> if you want.</div>
-      </div>
+<div class="tag">Meta Learning · Post #00006</div>
 
-      <p>
-        ၅၀၀တန်မှာပါတဲ့<br/>
-        ခြင်္သေ့က ဘယ်ဘက်ကို မျက်နှာမူတာလဲ<br/>
-        ဘယ်ဘက်လား ညာဘက်လား?
-      </p>
+<h1>စာကျက်တိုင်း စာမရနေတာ ဘာကြောင့်လဲ? </h1>
+<div class="meta">by Haru · 1% Better Every Day</div>
 
-      <p>
-        ပိုက်ဆံ ၅၀၀တန်ကို<br/>
-        အကြိမ် ၁၀၀ မက<br/>
-        လူတိုင်း မြင်ဖူးကြတယ်<br/>
-        သုံးလဲ သုံးဖူးတယ်။
-      </p>
+<div class="figure">
+  <img src="../assets/images/post00006/cover_boy_with_books.jpg" alt="Boy surrounded by books">
+  <div class="caption">စာကျက်တိုင်း စာမရနေတာ ဘာကြောင့်လဲ?</div>
+</div>
 
-      <p>
-        ဒါဆိုဘာလို့<br/>
-        မသိရတာလဲ ? …..
-      </p>
+<p>
+ဒီကိစ္စကိုလက်တွေ့ကြကြပြောဖို့အတွက် <br>
+၅၀၀တန်လေးနဲ့ စလိုက်ရအောင်<br><br>
+<b>၅၀၀တန်မှာပါတဲ့<br>
+ခြင်္သေ့က ဘယ်ဘက်ကို မျက်နှာမူတာလဲ<br></b>
+ဘယ်ဘက်လား ညာဘက်လား?
+</p>
 
-      <div class="dot"></div>
-      <h2 class="section-title">(1) စာကျက်တိုင်း စာမရနေတဲ့ ပြဿနာ</h2>
+<p>
+ပိုက်ဆံ ၅၀၀တန်ကို<br>
+အကြိမ် ၁၀၀ မက<br>
+လူတိုင်း မြင်ဖူးကြတယ်<br>
+သုံးလဲ သုံးဖူးတယ်။
+</p>
 
-      <p>
-        ကျနော်တို့ ငယ်ငယ်တုန်းက<br/>
-        လေ့လာသင်ယူမှုတွေ လုပ်တဲ့အခါ<br/>
-        အကြောင်းအရာတစ်ခုကို
-      </p>
+<p>
+ဒါဆိုဘာလို့<br> အလွယ်တကူ
+မသိရတာလဲ ? …..
+</p>
 
-      <p>
-        ထပ်ခါထပ်ခါ မြင်ဖူး<br/>
-        ထပ်ခါထပ်ခါ ကြားဖူးနားဝရှိလာရင်<br/>
-        အဲ့ဒါကို အလွတ်ရလာမယ်လို့<br/>
-        သိခဲ့ကြရတယ်။
-      </p>
+<div class="dot"></div>
+<h2>(1) စာကျက်တိုင်း စာမရနေတဲ့ ပြဿနာ</h2>
 
-      <p>
-        ဒါကြောင့်လည်း<br/>
-        အော်ကျက်ကြတယ် အော်ဖတ်ကြတယ်<br/>
-        ထပ်ခါထပ်ခါရေးတယ်။
-      </p>
+<p>
+ကျနော်တို့ ငယ်ငယ်တုန်းက<br>
+လေ့လာသင်ယူမှုတွေ လုပ်တဲ့အခါ<br>
+အကြောင်းအရာတစ်ခုကို
+</p>
 
-      <p>
-        ဒီနည်းလမ်းတွေက တကယ်အလုပ်ဖြစ်တယ်<br/>
-        မဖြစ်ဘူးဆိုတာ<br/>
-        စာမေးပွဲခန်းထဲက သင်ကအသိဆုံးဖြစ်မှာပါ။
-      </p>
+<p>
+ထပ်ခါထပ်ခါ မြင်ဖူး<br>
+ထပ်ခါထပ်ခါ ကြားဖူးနားဝရှိလာရင်<br>
+အဲ့ဒါကို အလွတ်ရလာမယ်လို့<br>
+သိခဲ့ကြရတယ်။
+</p>
 
-      <div class="dot"></div>
-      <h2 class="section-title">(2) ရသွားပြီလို့ ထင်ပေမယ့်မရနေတဲ့ပြဿနာ</h2>
+<p>
+ဒါကြောင့်လည်း<br>
+အော်ကျက်ကြတယ် အော်ဖတ်ကြတယ်<br>
+ထပ်ခါထပ်ခါရေးတယ်။
+</p>
 
-      <p>
-        စာရတယ်လို့ “ခံစားရပေမယ့်”<br/>
-        တကယ့်လက်တွေ့မှာ<br/>
-        စာရ မနေတာကို<br/>
-        <strong>Illusion of Learning</strong> လို့ခေါ်ပါတယ်။
-      </p>
+<p>
+ဒီနည်းလမ်းတွေက တကယ်အလုပ်ဖြစ်တယ်<br>
+မဖြစ်ဘူးဆိုတာ<br>
+စာမေးပွဲခန်းထဲက သင်ကအသိဆုံးဖြစ်မှာပါ။
+</p>
 
-      <p>
-        အခု ၅၀၀ တန်ကိစ္စလိုပေါ့။<br/>
-        ဒါတောင် ကျောဘက်မှာ ဘာပုံလဲလို့<br/>
-        မမေးရသေးဖူးနော် …
-      </p>
+<div class="figure">
+  <img src="../assets/images/post00006/stress_asthetic.jpg" alt="Stress study aesthetic">
+  <div class="caption">စာကျက်တိုင်းသာ စာရမယ်ဆိုရင် သိပ်ကောင်းမှာပဲ</div>
+</div>
 
-      <div class="highlight">
-        <p style="margin:0;">
-          စာမေးပွဲမှာ မေးတဲ့မေးခွန်းတွေက<br/>
-          “ဒါရတယ်လို့ ခံစားရလား” လို့<br/>
-          မေးတာမျိုးမဟုတ်ဘဲ<br/>
-          အကြောင်းအရာကို “တိတိကျကျ”<br/>
-          ချရေးခိုင်းတာဆိုတော့<br/>
-          ဂွမ်းပါလေရော။
-        </p>
-      </div>
+<div class="dot"></div>
+<h2>(2) ရသွားပြီလို့ ထင်ပေမယ့်မရနေတဲ့ပြဿနာ</h2>
 
-      <div class="dot"></div>
-      <h2 class="section-title">(3) ဘာကြောင့် ဒီလိုဖြစ်ရတာလဲ?</h2>
+<p>
+စာရတယ်လို့ “ခံစားရပေမယ့်”<br>
+တကယ့်လက်တွေ့မှာ<br>
+စာရ မနေတာကို<br>
+<strong>Illusion of Learning</strong> လို့ခေါ်ပါတယ်။
+</p>
 
-      <p>
-        ဘာလို့ဒီလိုဖြစ်ရတာလဲဆိုတော့<br/>
-        ဦးနှောက်မှာ အရေးကြီးဆုံးတာဝန်<br/>
-        (၃) ခုရှိလို့ပါ။
-      </p>
+<p>
+အခု ၅၀၀ တန်ကိစ္စလိုပေါ့။<br>
+ဒါတောင် ကျောဘက်မှာ ဘာပုံလဲလို့<br>
+မမေးရသေးဖူးနော် …
+</p>
 
-      <ol>
-        <li>လူကို အသက်မသေအောင်ထားဖို့</li>
-        <li>လူကို အသက်ရှင်အောင်ထားဖို့</li>
-        <li>😗 အင်းဟုတ်တယ်တူတူပဲ အပေါ်ကဟာပဲ </li>
-      </ol>
+<div class="highlight">
+<p>
+စာမေးပွဲမှာ မေးတဲ့မေးခွန်းတွေက<br>
+“ဒါရတယ်လို့ ခံစားရလား” လို့<br>
+မေးတာမျိုးမဟုတ်ဘဲ<br>
+အကြောင်းအရာကို “တိတိကျကျ”<br>
+ချရေးခိုင်းတာဆိုတော့<br>
+ဂွမ်းပါလေရော။
+</p>
+</div>
 
-      <p>
-        ဒီအလုပ်ကို လုပ်ဖို့အတွက်<br/>
-        ဦးနှောက်ရဲ့ မှတ်ဉာဏ်တွေဟာ<br/>
-        <strong>Shortcut (ဖြတ်လမ်းနည်း)</strong> ကို<br/>
-        သုံးရပါတယ်။
-      </p>
+<div class="dot"></div>
+<h2>(3) ဘာကြောင့် ဒီလိုဖြစ်ရတာလဲ?</h2>
 
-      <div class="dot"></div>
-      <h2 class="section-title">(4) Shortcut သုံးတဲ့ ဦးနှောက်</h2>
+<p>
+ဘာလို့ဒီလိုဖြစ်ရတာလဲဆိုတော့<br>
+ဦးနှောက်မှာ အရေးကြီးဆုံးတာဝန်<br>
+(၃) ခုရှိလို့ပါ။
+</p>
 
-      <p>
-        အသက်ရှင်ဖို့အတွက်<br/>
-        ရုတ်တရက် ဖြစ်လာတာတွေကို မစဉ်းစားဘဲ<br/>
-        တန်းတုံ့ပြန်နိုင်ဖို့လိုပါတယ်။
-      </p>
+<ol>
+  <li>လူကို အသက်မသေအောင်ထားဖို့</li>
+  <li>လူကို အသက်ရှင်အောင်ထားဖို့</li>
+  <li>😗 အင်းဟုတ်တယ်တူတူပဲ အပေါ်ကဟာပဲ</li>
+</ol>
 
-      <p>
-        ဥပမာ<br/>
-        ကားမောင်းနေရင်းနဲ့<br/>
-        တိုက်မိတော့မယ်မိရင်
-      </p>
+<p>
+ဒီအလုပ်ကို လုပ်ဖို့အတွက်<br>
+ဦးနှောက်ရဲ့ မှတ်ဉာဏ်တွေဟာ<br>
+<strong>Shortcut (ဖြတ်လမ်းနည်း)</strong> ကို<br>
+သုံးရပါတယ်။
+</p>
 
-      <div class="quote">
-        <p style="margin:0;">
-          “ငါဘရိတ်အုပ်ရမလား?”<br/>
-          “ဘယ်လိုလုပ်ရမလဲ?” ဆိုပြီး<br/>
-          စဉ်းစားတွေဝေမနေဘဲ<br/>
-          ဖြစ်လာတာကို တန်းတုံ့ပြန်လိုက်ဖို့ လိုပါတယ်။
-        </p>
-      </div>
+<div class="dot"></div>
+<h2>(4) Shortcut သုံးတဲ့ ဦးနှောက်</h2>
 
-      <div class="dot"></div>
-      <h2 class="section-title">(5) စာကျက်တဲ့နေရာမှာ Shortcut တွေ သုံးလာရင် ဆိုးကျိုးအနေနဲ့က</h2>
+<p>
+အသက်ရှင်ဖို့အတွက်<br>
+ရုတ်တရက် ဖြစ်လာတာတွေကို မစဉ်းစားဘဲ<br>
+တန်းတုံ့ပြန်နိုင်ဖို့လိုပါတယ်။
+</p>
 
-      <p>
-        မတိကျတာတွေဖြစ်မယ်။<br/>
-        စာတွေ ကျန်ခဲ့တာတွေဖြစ်မယ်။<br/>
-        စာတွေမေ့တာတွေဖြစ်ပါမယ်။
-      </p>
+<p>
+ဥပမာ<br>
+ကားမောင်းနေရင်းနဲ့<br>
+တိုက်မိတော့မယ်မိရင်
+</p>
 
-      <p>
-        ဒါကြောင့် မမေ့သင့်တဲ့အရာတွေဆိုရင်<br/>
-        ဒါဟာအရေးကြီးတယ်ဆိုတာကို<br/>
-        ဦးနှောက်ကို သေချာ အချက်ပြဖို့လိုပါတယ်။
-      </p>
+<div class="quote">
+<p>
+“ငါဘရိတ်အုပ်ရမလား?”<br>
+“ဘယ်လိုလုပ်ရမလဲ?” ဆိုပြီး<br>
+စဉ်းစားတွေဝေမနေဘဲ<br>
+ဖြစ်လာတာကို တန်းတုံ့ပြန်လိုက်ဖို့ လိုပါတယ်။
+</p>
+</div>
 
-      <div class="dot"></div>
-      <h2 class="section-title">(6) ဘယ်လို အချက်ပြမလဲ …</h2>
+<div class="figure">
+  <img src="../assets/images/post00006/study_withboard.jpg" alt="Study with whiteboard">
+  <div class="caption">ခေါင်းထဲစာကို ပြန်ခေါ်ထုတ်ပြီး ချရေးနိုင်မှ သင်ယူမှု တကယ်ဖြစ်ပါတယ်</div>
+</div>
 
-      <p>
-        စာတစ်ခုကို
-      </p>
+<div class="dot"></div>
+<h2>(5) စာကျက်တဲ့နေရာမှာ Shortcut တွေ သုံးလာရင် ဆိုးကျိုးအနေနဲ့က</h2>
 
-      <p>
-        ခေါင်းထဲမှာ<br/>
-        တကယ် စွဲသွားစေချင်ရင်
-      </p>
+<p>
+မတိကျတာတွေဖြစ်မယ်။<br>
+စာတွေ ကျန်ခဲ့တာတွေဖြစ်မယ်။<br>
+စာတွေမေ့တာတွေဖြစ်ပါမယ်။
+</p>
 
-      <p>
-        ဖတ်နေရုံနဲ့<br/>
-        မလုံလောက်ပါဘူး။<br/>
-        ခေါင်းထဲကနေ ပြန်ခေါ်ထုတ်ရပါမယ်။
-      </p>
+<p>
+ဒါကြောင့် မမေ့သင့်တဲ့အရာတွေဆိုရင်<br>
+ဒါဟာအရေးကြီးတယ်ဆိုတာကို<br>
+ဦးနှောက်ကို သေချာ အချက်ပြဖို့လိုပါတယ်။
+</p>
 
-      <div class="highlight">
-        <p style="margin:0;">
-          ဒီလိုလုပ်တာကို<br/>
-          <strong>Active Recall</strong><br/>
-          လို့ခေါ်ပါတယ်။
-        </p>
-      </div>
+<div class="dot"></div>
+<h2>(6) ဘယ်လို အချက်ပြမလဲ …</h2>
 
-      <p>
-        Science research တွေအရ
-      </p>
+<p>
+စာတစ်ခုကို
+</p>
 
-      <p>
-        စာကို<br/>
-        ထပ်ခါထပ်ခါ ဖတ်တာထက်<br/>
-        ကိုယ်တိုင် မှတ်ဉာဏ်ထဲကနေ<br/>
-        ပြန်ခေါ်ထုတ်ကြည့်တာဟာ<br/>
-        စာမှတ်မိမှုကို<br/>
-        ပိုပြီး တိုးတက်စေပါတယ်တဲ့။
-      </p>
+<p>
+ခေါင်းထဲမှာ<br>
+တကယ် စွဲသွားစေချင်ရင်
+</p>
 
-      <p>
-        2011 ခုနှစ်မှာ<br/>
-        Cognitive psychologist<br/>
-        Henry Roediger နဲ့<br/>
-        Jeffrey Karpicke တို့ရဲ့<br/>
-        လေ့လာမှုတစ်ခုအရ
-      </p>
+<p>
+ဖတ်နေရုံနဲ့<br>
+မလုံလောက်ပါဘူး။<br>
+ခေါင်းထဲကနေ ပြန်ခေါ်ထုတ်ရပါမယ်။
+</p>
 
-      <div class="highlight">
-        <p style="margin:0;">
-          စာကို ထပ်ခါခါပြန်ဖတ်တာထက်<br/>
-          Active Recall သုံးပြီးစာလုပ်တဲ့<br/>
-          ကျောင်းသားတွေဟာ စာကို<br/>
-          <strong>၅၀% ကျော် ပိုမှတ်မိနိုင်ခဲ့ပါတယ်။</strong>
-        </p>
-      </div>
+<div class="highlight">
+<p>
+ဒီလိုလုပ်တာကို<br>
+<strong>Active Recall</strong><br>
+လို့ခေါ်ပါတယ်။
+</p>
+</div>
 
-      <div class="dot"></div>
-      <h2 class="section-title">(7) Active Recall နဲ့ စာဘယ်လိုကျက်ရမလဲ ဆိုတာကိုတော့</h2>
+<p>
+Science research တွေအရ
+</p>
 
-      <p>
-        <strong>နောက်တစ်ပတ်ထဲမှာ</strong><br/>
-        ပြောသွားပေးပါမယ်။
-      </p>
+<p>
+စာကို<br>
+ထပ်ခါထပ်ခါ ဖတ်တာထက်<br>
+ကိုယ်တိုင် မှတ်ဉာဏ်ထဲကနေ<br>
+ပြန်ခေါ်ထုတ်ကြည့်တာဟာ<br>
+စာမှတ်မိမှုကို<br>
+ပိုပြီး တိုးတက်စေပါတယ်တဲ့။
+</p>
 
-      
+<p>
+2011 ခုနှစ်မှာ<br>
+Cognitive psychologist<br>
+Henry Roediger နဲ့<br>
+Jeffrey Karpicke တို့ရဲ့<br>
+လေ့လာမှုတစ်ခုအရ
+</p>
 
-      <p style="margin-top:18px;">
-        Haru<br/>
-        <strong>1% Better Every Day</strong>
-      </p>
+<div class="highlight">
+<p>
+စာကို ထပ်ခါခါပြန်ဖတ်တာထက်<br>
+Active Recall သုံးပြီးစာလုပ်တဲ့<br>
+ကျောင်းသားတွေဟာ စာကို<br>
+<strong>၅၀% ကျော် ပိုမှတ်မိနိုင်ခဲ့ပါတယ်။</strong>
+</p>
+</div>
 
-      <hr class="divider" />
+<div class="dot"></div>
+<h2>(7) Active Recall နည်းလမ်းကို သုံးပြီး<br> အဆင့်၅ဆင့်နဲ့ စာဘယ်လိုကျက်ရမလဲ ဆိုတာကိုတော့</h2>
+
+<p>
+
+ဒီအောက်က လင့်လေးကို နိပ်ပြီး ဆက်ဖတ်လို့ရပါတယ်
+</p>
+
+<div class="quote">
+    <a href="https://y3llowflash.github.io/haruwrites/posts/post00007.html">
+Active Recall : စာကျက်ပြီး စာမရတာမျိုး မဖြစ်စေမယ့် စာလုပ်နည်း
+https://y3llowflash.github.io/haruwrites/posts/post00007.html
+</a>
+</div>
 
 
-       <div class="links">
-        <p class="small"><strong>ဒါမျိုးထပ်ဖတ်ချင်သေးရင် ...</strong></p>
-        <ul>
-          <li style="margin:0.35em 0; font-size:1.14rem;">
-            <a href="https://y3llowflash.github.io/haruwrites/posts/post00001.html">ပိုကြိုးစားတိုင်း စာပိုရလာမယ်လို့ထင်နေတုန်းပဲလား?</a>
-          </li>
-          <li style="margin:0.35em 0; font-size:1.14rem;">
-            <a href="https://y3llowflash.github.io/haruwrites/posts/post00002.html">အဖြေလွယ်လွယ်ရတဲ့ ခေတ်မှာ ပျောက်ဆုံးသွားတဲ့ “ခေါင်းကုတ်ရတဲ့ အခိုက်အတန့်”</a>
-          </li>
-          <li style="margin:0.35em 0; font-size:1.14rem;">
-            <a href="https://y3llowflash.github.io/haruwrites/index.html">တခြားPostများ</a>
-          </li>
-        </ul>
+<p style="margin-top:18px;">
+Haru<br>
+<strong>1% Better Every Day</strong>
+</p>
 
-      </div>
+<hr class="divider">
 
-      <div class="links">
-        <p class="small"><strong>VPN ချိတ်ပြီး ကျနော့် FB page မှာလည်း ထပ်ဖတ်လို့ရပါတယ် 🥳</strong></p>
-        <ul>
-          <li>
-            <a target="_blank" href="https://m.facebook.com/story.php?story_fbid=pfbid02HYQbz5qjdYC464CcLRN7udjXRLtfojAzTU3J4cqvp2aTCMV7MSPhJ6mtdKp9wwQvl&id=100089247064454&mibextid=Nif5oz">
-              Motivation မလိုတဲ့ စာလုပ်နည်း (စာလုပ်ရတာ ပျော်ချင်ရင် ဒီလိုလုပ်ပါ)
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://m.facebook.com/story.php?story_fbid=239530435698524&id=100089247064454&mibextid=Nif5oz">
-              စာမမေ့အောင် ဘယ်လိုလုပ်မလဲ
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://m.facebook.com/story.php?story_fbid=254880070830227&id=100089247064454&mibextid=Nif5oz">
-              စာလေ့လာတဲ့နှုန်း 10 ဆ မြန်ချင်ရင်
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://m.facebook.com/story.php?story_fbid=255941847390716&id=100089247064454&mibextid=Nif5oz">
-              Stress ကြားထဲမှာ စာလုပ်နည်း
-            </a>
-          </li>
-        </ul>
-      </div>
+<div class="links">
+  <p class="small"><strong>ဒါမျိုးထပ်ဖတ်ချင်သေးရင် ...</strong></p>
+  <ul>
+    <li style="margin:0.35em 0; font-size:1.14rem;">
+      <a href="https://y3llowflash.github.io/haruwrites/posts/post00001.html">ပိုကြိုးစားတိုင်း စာပိုရလာမယ်လို့ထင်နေတုန်းပဲလား?</a>
+    </li>
+    <li style="margin:0.35em 0; font-size:1.14rem;">
+      <a href="https://y3llowflash.github.io/haruwrites/posts/post00002.html">အဖြေလွယ်လွယ်ရတဲ့ ခေတ်မှာ ပျောက်ဆုံးသွားတဲ့ “ခေါင်းကုတ်ရတဲ့ အခိုက်အတန့်”</a>
+    </li>
+    <li style="margin:0.35em 0; font-size:1.14rem;">
+      <a href="https://y3llowflash.github.io/haruwrites/index.html">တခြားPostများ</a>
+    </li>
+  </ul>
+</div>
 
-      <hr class="divider" />
+<div class="links">
+  <p class="small"><strong>VPN ချိတ်ပြီး ကျနော့် FB page မှာလည်း ထပ်ဖတ်လို့ရပါတယ် 🥳</strong></p>
+  <ul>
+    <li>
+      <a target="_blank" href="https://m.facebook.com/story.php?story_fbid=pfbid02HYQbz5qjdYC464CcLRN7udjXRLtfojAzTU3J4cqvp2aTCMV7MSPhJ6mtdKp9wwQvl&id=100089247064454&mibextid=Nif5oz">
+        Motivation မလိုတဲ့ စာလုပ်နည်း (စာလုပ်ရတာ ပျော်ချင်ရင် ဒီလိုလုပ်ပါ)
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://m.facebook.com/story.php?story_fbid=239530435698524&id=100089247064454&mibextid=Nif5oz">
+        စာမမေ့အောင် ဘယ်လိုလုပ်မလဲ
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://m.facebook.com/story.php?story_fbid=254880070830227&id=100089247064454&mibextid=Nif5oz">
+        စာလေ့လာတဲ့နှုန်း 10 ဆ မြန်ချင်ရင်
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://m.facebook.com/story.php?story_fbid=255941847390716&id=100089247064454&mibextid=Nif5oz">
+        Stress ကြားထဲမှာ စာလုပ်နည်း
+      </a>
+    </li>
+  </ul>
+</div>
 
-      <section class="comments-wrap">
-        <h2 class="section-title" style="margin-top:0;">💬 Comments</h2>
-        <p class="small" style="margin-top:-6px;">Anonymous comments allowed. Be kind. ❤️</p>
+<hr class="divider">
 
-        <div id="disqus_thread"></div>
+<section class="comments-wrap">
+  <h2 style="margin-top:0;">💬 Comments</h2>
+  <p class="small" style="margin-top:-6px;">Anonymous comments allowed. Be kind. ❤️</p>
 
-        <script>
-          var disqus_config = function () {
-            this.page.url = window.location.href;
-            this.page.identifier = window.location.pathname;
-          };
+  <div id="disqus_thread"></div>
 
-          (function() {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://post0001.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
+  <script>
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = window.location.pathname;
+    };
 
-        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-      </section>
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://post0001.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
 
-    </article>
-  </div>
+  <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</section>
+
+</article>
+</div>
 </body>
 </html>
